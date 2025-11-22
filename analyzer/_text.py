@@ -1,16 +1,12 @@
 from typing import Any, Dict, List
 from textblob import TextBlob
 
+
 def analyze_text(text: str) -> Dict[str, Any]:
-    """Analyze text and return sentiment, word count, and keywords.
+    """Analyze text and return simple primitive results.
 
-    Returns a dictionary with the following keys:
-    - 'sentiment': {'polarity': float, 'subjectivity': float}
-    - 'word_count': int
-    - 'key_words': List[str]
-
-    The function keeps the implementation small and deterministic so it is easy
-    to test and review for a portfolio project.
+    Returns:
+        Dict with keys: 'sentiment' ({'polarity','subjectivity'}), 'word_count', 'key_words'
     """
 
     blob = TextBlob(text or "")

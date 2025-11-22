@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlpulse"
+version = "0.1.0"
+description = "Text & speech analysis demo (NLPulse)"
+authors = [{ name = "xzyqiu" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "textblob>=0.17.1",
+    "nltk>=3.8.1",
+    "SpeechRecognition>=3.8.1",
+    "pydub>=0.25.1",
+]
+
+[project.scripts]
+nlpulse = "main:main"
+
+[tool.black]
+line-length = 88
