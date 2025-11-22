@@ -4,18 +4,17 @@ from analyzer.text_analysis import analyze_text
 from analyzer.speech_analysis import speech_to_text
 
 def run_streamlit():
-    """Run the Streamlit interface."""
     subprocess.run("streamlit run gui/interface.py", shell=True)
 
 def run_text_analysis(text):
-    """Analyze text from CLI."""
+    #Analyze text
     result = analyze_text(text)
     print("Sentiment:", result['sentiment'])
     print("Word Count:", result['word_count'])
     print("Keywords:", result['key_words'])
 
 def run_audio_analysis(file_path):
-    """Analyze audio from CLI."""
+    #Analyze audio
     text = speech_to_text(file_path)
     print("Transcribed Text:", text)
     run_text_analysis(text)

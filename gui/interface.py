@@ -1,4 +1,9 @@
 import streamlit as st
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from analyzer.text_analysis import analyze_text
 from analyzer.speech_analysis import speech_to_text
 
