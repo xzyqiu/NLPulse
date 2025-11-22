@@ -1,5 +1,11 @@
 import streamlit as st
 import tempfile
+import os
+import sys
+
+# Ensure project root is on sys.path so `analyzer` package can be imported when
+# Streamlit runs this file from the `gui/` directory.
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from analyzer._text import analyze_text
 from analyzer._speech import speech_to_text

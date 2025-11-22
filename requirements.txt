@@ -9,3 +9,14 @@ pytest==7.4.0
 black==24.1.0
 flake8==6.1.0
 isort==5.12.0
+textblob==0.17.1
+nltk==3.8.1
+SpeechRecognition==3.8.1
+pydub==0.25.1
+matplotlib==3.7.1
+
+# Development / CI
+pytest==7.4.0
+black==24.1.0
+flake8==6.1.0
+isort==5.12.0
